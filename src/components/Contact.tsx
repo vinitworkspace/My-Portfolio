@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,27 +18,30 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Netlify Forms will handle the submission automatically
-    // We just need to show loading state and handle the response
-    const form = e.target as HTMLFormElement;
-    
-    // Submit the form data
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form) as any).toString(),
-    })
-      .then(() => {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        form.reset();
-      })
-      .catch(() => {
-        setSubmitStatus('error');
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+    // EmailJS configuration
+    const serviceId = 'service_w2s79gc'; // Your Gmail service ID
+    const templateId = 'template_791fchk'; // Your EmailJS template ID
+    const publicKey = 'f2H6IP09M3gkR837N'; // Your EmailJS public key
+
+    if (form.current) {
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        .then((result) => {
+          console.log('SUCCESS!', result.text);
+          setSubmitStatus('success');
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          // Reset form
+          if (form.current) {
+            form.current.reset();
+          }
+        })
+        .catch((error) => {
+          console.log('FAILED...', error.text);
+          setSubmitStatus('error');
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -135,8 +140,8 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <div>
             <h3 className="text-2xl font-semibold text-white mb-8">Send a Message</h3>
-            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="form-name" value="contact" />
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="time" value={new Date().toLocaleString()} />
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-gray-300 mb-2">
