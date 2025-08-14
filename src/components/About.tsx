@@ -58,17 +58,19 @@ const About: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-lg border border-slate-700/50">
               <div className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-6xl font-bold mb-6 overflow-hidden">
                 <img 
-                  src="https://drive.google.com/file/d/1EwDvfYN2Ic35kKY4jSV-Mc2PO4_0IuED/preview" 
+                  src="/profile-photo.png" 
                   alt="Nishant Bansod" 
                   className="w-full h-full object-cover rounded-2xl"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
-                    target.nextElementSibling!.textContent = 'NB';
-                    target.nextElementSibling!.style.display = 'flex';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) {
+                      fallback.style.display = 'flex';
+                    }
                   }}
                 />
-                <div className="hidden w-full h-full items-center justify-center text-6xl font-bold">
+                <div className="hidden w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-6xl font-bold">
                   NB
                 </div>
               </div>
