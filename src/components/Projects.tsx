@@ -10,7 +10,7 @@ based on user input.
 – Integrated smart backend logic to analyze user goals and provide tailored advice for job roles, skills, and growth paths.
 – Designed clean UI/UX for intuitive navigation, ensuring users could easily explore career options and receive actionable
 insights.`,
-      image: '/public/logo1.png',
+      image: '/logo1.png',
       technologies: ['React.js', 'Next.js', 'MySQL', 'NeonDB', 'Clerk'],
       githubUrl: 'https://github.com/vinitworkspace/vinzie-career-coach',
       featured: true,
@@ -18,7 +18,7 @@ insights.`,
     {
       title: 'Job Listing App',
       description: 'A responsive and user-friendly job listing platform built using React.js, designed to help users browse, search, and filter job opportunities with ease. The app showcases core frontend development skills including component architecture, state management, and dynamic rendering.',
-      image: '/public/job.png',
+      image: '/job.png',
       technologies: ['React','Tailwind CSS', 'Git'],
       githubUrl: 'https://github.com/vinitworkspace/react-job-board-assignment',
       featured: true,
