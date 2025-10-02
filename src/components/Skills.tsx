@@ -7,32 +7,20 @@ const Skills: React.FC = () => {
     { name: 'React.js', icon: '⚛️', category: 'Frontend', color: 'blue' },
     { name: 'JavaScript', icon: '🟨', category: 'Frontend', color: 'blue' },
     { name: 'HTML5', icon: '🌐', category: 'Frontend', color: 'blue' },
-    { name: 'CSS3', icon: '🎨', category: 'Frontend', color: 'blue' },
+    { name: 'CSS', icon: '🎨', category: 'Frontend', color: 'blue' },
     { name: 'Tailwind CSS', icon: '💨', category: 'Frontend', color: 'blue' },
-    { name: 'Bootstrap', icon: '🎯', category: 'Frontend', color: 'blue' },
     
     // Backend Skills
     { name: 'Node.js', icon: '🟢', category: 'Backend', color: 'emerald' },
-    { name: 'Express.js', icon: '🚀', category: 'Backend', color: 'emerald' },
-    { name: 'MongoDB', icon: '🍃', category: 'Backend', color: 'emerald' },
     { name: 'MySQL', icon: '🐬', category: 'Backend', color: 'emerald' },
-    { name: 'REST APIs', icon: '🔗', category: 'Backend', color: 'emerald' },
-    { name: 'JWT Auth', icon: '🔐', category: 'Backend', color: 'emerald' },
     
     // Tools & Technologies
     { name: 'Git & GitHub', icon: '📚', category: 'Tools', color: 'purple' },
-    { name: 'Redux', icon: '🔄', category: 'Tools', color: 'purple' },
     { name: 'Firebase', icon: '🔥', category: 'Tools', color: 'purple' },
-    { name: 'Webpack', icon: '📦', category: 'Tools', color: 'purple' },
     { name: 'NPM', icon: '📦', category: 'Tools', color: 'purple' },
-    { name: 'CI/CD', icon: '⚡', category: 'Tools', color: 'purple' },
     
     // Programming & Concepts
     { name: 'Java', icon: '☕', category: 'Programming', color: 'orange' },
-    { name: 'Python', icon: '🐍', category: 'Programming', color: 'orange' },
-    { name: 'Code Splitting', icon: '✂️', category: 'Programming', color: 'orange' },
-    { name: 'Lazy Loading', icon: '⏳', category: 'Programming', color: 'orange' },
-    { name: 'Cloud Deployment', icon: '☁️', category: 'Programming', color: 'orange' },
     { name: 'Problem Solving', icon: '🧩', category: 'Programming', color: 'orange' },
   ];
 

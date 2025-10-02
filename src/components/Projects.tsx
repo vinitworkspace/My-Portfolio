@@ -4,58 +4,24 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'Store Rating System',
-      description: 'Full-Stack Web Application with multi-role store rating platform supporting Admin, Store Owner, and User roles. Features secure JWT authentication, responsive UI with light/dark mode, real-time search with debounce, and advanced store filtering.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'Node.js', 'MySQL', 'Express.js'],
-      liveUrl: 'https://github.com/nishant-bansod/Store-Rating-System',
-      githubUrl: 'https://github.com/nishant-bansod/Store-Rating-System',
+      title: 'VinZie - AI Career Coach',
+      description: `Built a responsive career guidance platform using Next.js and Tailwind CSS, delivering personalized recommendations
+based on user input.
+– Integrated smart backend logic to analyze user goals and provide tailored advice for job roles, skills, and growth paths.
+– Designed clean UI/UX for intuitive navigation, ensuring users could easily explore career options and receive actionable
+insights.`,
+      image: '/public/logo1.png',
+      technologies: ['React.js', 'Next.js', 'MySQL', 'NeonDB', 'Clerk'],
+      githubUrl: 'https://github.com/vinitworkspace/vinzie-career-coach',
       featured: true,
     },
     {
-      title: 'Real-Time Chat Application',
-      description: 'Responsive real-time chat app with Firebase Authentication and Firestore messaging. Integrated contact request system with 24-hour expiry invite links using Firestore timestamp logic.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Firebase', 'Firestore', 'Netlify'],
-      liveUrl: 'https://nishant-chat-room.netlify.app/',
-      githubUrl: 'https://github.com/nishant-bansod/chat-app',
+      title: 'Job Listing App',
+      description: 'A responsive and user-friendly job listing platform built using React.js, designed to help users browse, search, and filter job opportunities with ease. The app showcases core frontend development skills including component architecture, state management, and dynamic rendering.',
+      image: '/public/image.png',
+      technologies: ['React','Tailwind CSS', 'Git'],
+      githubUrl: 'https://github.com/vinitworkspace/react-job-board-assignment',
       featured: true,
-    },
-    {
-      title: 'Image Search App',
-      description: 'Intuitive image search application with HTML, CSS, and JavaScript. Integrated the Unsplash API to fetch and display high-resolution images based on user queries.',
-      image: 'https://images.pexels.com/photos/1446076/pexels-photo-1446076.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Unsplash API'],
-      liveUrl: 'https://nishant-bansod.github.io/search_img_app/',
-      githubUrl: 'https://github.com/nishant-bansod/search_img_app',
-      featured: false,
-    },
-    {
-      title: 'Plant Disease Classification',
-      description: 'AI/ML project for plant disease classification developed for AICTE Cycle 4. Uses machine learning algorithms to identify and classify plant diseases from images.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'Machine Learning', 'AI', 'Image Processing'],
-      liveUrl: 'https://github.com/nishant-bansod/PlantDiseaseClassification_AICTE_Cycle4',
-      githubUrl: 'https://github.com/nishant-bansod/PlantDiseaseClassification_AICTE_Cycle4',
-      featured: false,
-    },
-    {
-      title: 'URL Shortener',
-      description: 'A URL shortening service that converts long URLs into short, manageable links. Features include link tracking and analytics.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'REST API'],
-      liveUrl: 'https://github.com/nishant-bansod/url-shortener',
-      githubUrl: 'https://github.com/nishant-bansod/url-shortener',
-      featured: false,
-    },
-    {
-      title: 'Find My EV Station',
-      description: 'Electric vehicle charging station finder application. Helps users locate nearby EV charging stations with real-time availability and navigation.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'Maps API', 'Location Services'],
-      liveUrl: 'https://find-my-ev-station.web.app/',
-      githubUrl: 'https://github.com/nishant-bansod/FindMyEVStation',
-      featured: false,
     },
   ];
 
@@ -110,15 +76,6 @@ const Projects: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                    >
-                      <ExternalLink size={18} className="mr-2" />
-                      Live Demo
-                    </a>
-                    <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -135,7 +92,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Other Projects */}
-        <div>
+        {/* <div>
           <h3 className="text-2xl font-semibold text-white mb-8 flex items-center">
             <Folder className="text-purple-400 mr-3" size={24} />
             Other Projects
@@ -187,7 +144,7 @@ const Projects: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

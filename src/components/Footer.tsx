@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-gray-400 mb-4 md:mb-0">
             <p className="flex items-center">
-              Made with <Heart size={16} className="text-red-500 mx-2" /> by Your Name
+              Made with <Heart size={16} className="text-red-500 mx-2" /> Vinit Awate
             </p>
           </div>
           <div className="text-gray-400">

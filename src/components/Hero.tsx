@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: [
+        "Web Developer",
+        "Java Developer",
+        "MERN Developer",
+        "Video Editor",
+        "Full Stack Developer",
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   const scrollToNext = () => {
     const aboutSection = document.querySelector('#about');
     aboutSection?.scrollIntoView({ behavior: 'smooth' });
@@ -15,20 +37,20 @@ const Hero: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-in">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                NISHANT BANSOD
+                VINIT AWATE
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-6 animate-fade-in-delay-1">
-              MERN Stack Developer
+              <span ref={typedRef} />
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-delay-2">
-              Passionate MERN Stack Developer skilled in building full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Finalist in Infosys Hackathon 2025 and actively engaged in problem-solving through coding contests and real-world projects.
+              I'm passionate about building responsive web apps, solving real-world problems through elegant full-stack solutions, and participating in coding challenges. I’ve developed impactful projects like VinZie – Chat App and VinZie – AI Career Coach, blending innovation with practical utility.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fade-in-delay-3">
             <a
-              href="https://drive.google.com/file/d/19RrzxwJoTwagOZs5xa7Uf69KuzIAGJOo/view?usp=sharing"
+              href="https://drive.google.com/file/d/17TRePIsc1OXiOCItwRBkSH_ADXF6fGe_/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 cursor-pointer"
@@ -46,7 +68,7 @@ const Hero: React.FC = () => {
 
           <div className="flex justify-center space-x-8 mb-8 animate-fade-in-delay-4">
             <a
-              href="https://github.com/nishant-bansod"
+              href="https://github.com/vinitworkspace"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -54,7 +76,7 @@ const Hero: React.FC = () => {
               <Github size={28} />
             </a>
             <a
-              href="https://www.linkedin.com/in/nishantbansod"
+              href="https://www.linkedin.com/in/vinitawate"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -62,7 +84,7 @@ const Hero: React.FC = () => {
               <Linkedin size={28} />
             </a>
             <a
-              href="mailto:njbansod@gmail.com"
+              href="mailto:vinitworkspace@gmail.com"
               className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
             >
               <Mail size={28} />

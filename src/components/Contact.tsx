@@ -19,9 +19,9 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     // EmailJS configuration
-    const serviceId = 'service_w2s79gc'; // Your Gmail service ID
-    const templateId = 'template_791fchk'; // Your EmailJS template ID
-    const publicKey = 'f2H6IP09M3gkR837N'; // Your EmailJS public key
+    const serviceId = 'service_s0vru5m'; // Your Gmail service ID
+    const templateId = 'template_usydqsl'; // Your EmailJS template ID
+    const publicKey = 'O9MhsksjNIIGjbgRs'; // Your EmailJS public key
 
     if (form.current) {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey)
@@ -55,14 +55,14 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'njbansod@gmail.com',
-      link: 'mailto:njbansod@gmail.com',
+      value: 'vinitworkspace@gmail.com',
+      link: 'mailto:vinitworkspace@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 8857976782',
-      link: 'tel:+918857976782',
+      value: '+91 8586042940',
+      link: 'tel:+918586042940',
     },
     {
       icon: MapPin,
@@ -73,8 +73,8 @@ const Contact: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/nishant-bansod', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/nishantbansod', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/vinitworkspace', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/vinitawate', label: 'LinkedIn' },
   ];
 
   return (
