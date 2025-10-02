@@ -18,7 +18,7 @@ insights.`,
     {
       title: 'Job Listing App',
       description: 'A responsive and user-friendly job listing platform built using React.js, designed to help users browse, search, and filter job opportunities with ease. The app showcases core frontend development skills including component architecture, state management, and dynamic rendering.',
-      image: '/public/image.png',
+      image: '/public/job.png',
       technologies: ['React','Tailwind CSS', 'Git'],
       githubUrl: 'https://github.com/vinitworkspace/react-job-board-assignment',
       featured: true,
