@@ -40,7 +40,7 @@ const Experience: React.FC = () => {
   },
   {
     title: 'Excelr - ChatGPT & Generative AI',
-    url: 'https://example.com/web-tech-certificate',
+    url: 'https://drive.google.com/file/d/1EqEMa8HUGy-Nz7XCcVNyYibmkqqgtr6R/view?usp=drive_link',
   },
   {
     title: 'AWS - Solutions Architecture Job Simulation',
